@@ -7,6 +7,7 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
 const helmet = require('helmet');
+const compression = require('compression');
 // const { helmet, csp } = require('./utils/hemlet_csp_config');
 
 const AppError = require('./utils/appError');
@@ -74,6 +75,8 @@ app.use(
 //   console.log('Hello from the middleware 👋');
 //   next();
 // });
+
+app.use(compression());
 
 // Test Middleware
 app.use((req, res, next) => {
