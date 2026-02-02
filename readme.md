@@ -82,42 +82,46 @@ The app runs on `http://localhost:3000` by default.
 ## API Endpoints
 
 ### Tours
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/v1/tours` | Get all tours (filter, sort, paginate) |
-| GET | `/api/v1/tours/:id` | Get a single tour |
-| POST | `/api/v1/tours` | Create a tour (admin/lead-guide) |
-| PATCH | `/api/v1/tours/:id` | Update a tour |
-| DELETE | `/api/v1/tours/:id` | Delete a tour |
-| GET | `/api/v1/tours/top-5-cheap` | Top 5 affordable tours |
-| GET | `/api/v1/tours/tours-within/:distance/center/:latlng/unit/:unit` | Tours near a location |
-| GET | `/api/v1/tours/distances/:latlng/unit/:unit` | Distances to tours |
+
+| Method | Endpoint                                                         | Description                            |
+| ------ | ---------------------------------------------------------------- | -------------------------------------- |
+| GET    | `/api/v1/tours`                                                  | Get all tours (filter, sort, paginate) |
+| GET    | `/api/v1/tours/:id`                                              | Get a single tour                      |
+| POST   | `/api/v1/tours`                                                  | Create a tour (admin/lead-guide)       |
+| PATCH  | `/api/v1/tours/:id`                                              | Update a tour                          |
+| DELETE | `/api/v1/tours/:id`                                              | Delete a tour                          |
+| GET    | `/api/v1/tours/top-5-cheap`                                      | Top 5 affordable tours                 |
+| GET    | `/api/v1/tours/tours-within/:distance/center/:latlng/unit/:unit` | Tours near a location                  |
+| GET    | `/api/v1/tours/distances/:latlng/unit/:unit`                     | Distances to tours                     |
 
 ### Users
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/v1/users/signup` | Create account |
-| POST | `/api/v1/users/login` | Log in |
-| GET | `/api/v1/users/logout` | Log out |
-| POST | `/api/v1/users/forgotPassword` | Request password reset |
-| PATCH | `/api/v1/users/resetPassword/:token` | Reset password |
-| GET | `/api/v1/users/me` | Get current user |
-| PATCH | `/api/v1/users/updateMe` | Update profile / photo |
-| PATCH | `/api/v1/users/updateMyPassword` | Change password |
-| DELETE | `/api/v1/users/deleteMe` | Deactivate account |
+
+| Method | Endpoint                             | Description            |
+| ------ | ------------------------------------ | ---------------------- |
+| POST   | `/api/v1/users/signup`               | Create account         |
+| POST   | `/api/v1/users/login`                | Log in                 |
+| GET    | `/api/v1/users/logout`               | Log out                |
+| POST   | `/api/v1/users/forgotPassword`       | Request password reset |
+| PATCH  | `/api/v1/users/resetPassword/:token` | Reset password         |
+| GET    | `/api/v1/users/me`                   | Get current user       |
+| PATCH  | `/api/v1/users/updateMe`             | Update profile / photo |
+| PATCH  | `/api/v1/users/updateMyPassword`     | Change password        |
+| DELETE | `/api/v1/users/deleteMe`             | Deactivate account     |
 
 ### Reviews
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/v1/reviews` | Get all reviews |
-| POST | `/api/v1/tours/:tourId/reviews` | Create a review |
-| PATCH | `/api/v1/reviews/:id` | Update a review |
-| DELETE | `/api/v1/reviews/:id` | Delete a review |
+
+| Method | Endpoint                        | Description     |
+| ------ | ------------------------------- | --------------- |
+| GET    | `/api/v1/reviews`               | Get all reviews |
+| POST   | `/api/v1/tours/:tourId/reviews` | Create a review |
+| PATCH  | `/api/v1/reviews/:id`           | Update a review |
+| DELETE | `/api/v1/reviews/:id`           | Delete a review |
 
 ### Bookings
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/v1/booking/checkout-session/:tourId` | Get Stripe checkout session |
+
+| Method | Endpoint                                   | Description                 |
+| ------ | ------------------------------------------ | --------------------------- |
+| GET    | `/api/v1/booking/checkout-session/:tourId` | Get Stripe checkout session |
 
 ## Project Structure
 
@@ -132,7 +136,3 @@ The app runs on `http://localhost:3000` by default.
 ├── public/              # Static assets (CSS, JS, images)
 └── dev-data/            # Seed data & dev fixtures
 ```
-
-## Author
-
-Jonas Schmedtmann
